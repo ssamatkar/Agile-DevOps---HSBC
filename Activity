@@ -1,89 +1,89 @@
 Epic 1: User Account Management
 
-**Description:** This epic focuses on functionalities that allow users to manage their accounts, including profile settings, security, and account preferences.
+Description: This epic focuses on functionalities that allow users to manage their accounts, including profile settings, security, and account preferences.
 
-#### **User Story 1: User Registration**
-- **As a** new user
-- **I want** to register an account with the banking application
-- **So that** I can access and manage my financial information securely
+User Story 1: User Registration
+- As a new user
+- I want to register an account with the banking application
+- So that I can access and manage my financial information securely
 
-   **Acceptance Criteria:**
+   Acceptance Criteria:
    - Users should be able to register using their email address or phone number.
    - Users must verify their identity through a verification process (e.g., SMS code, email verification link).
    - The registration process should include setting a strong password.
 
-#### **User Story 2: User Login**
-- **As a** registered user
-- **I want** to log in to my account
-- **So that** I can access my banking dashboard and manage my finances
+User Story 2: User Login
+- As a registered user
+- I want to log in to my account
+- So that I can access my banking dashboard and manage my finances
 
-   **Acceptance Criteria:**
+   Acceptance Criteria:
    - Users should be able to log in using their email/phone number and password.
    - Implement multi-factor authentication (MFA) as an additional security layer.
    - Users should have the option to recover their password if forgotten.
 
-#### **User Story 3: Update Profile Information**
-- **As a** logged-in user
-- **I want** to update my personal information (e.g., name, address, phone number)
-- **So that** my profile information is always up to date
+User Story 3: Update Profile Information
+- As a logged-in user
+- I want to update my personal information (e.g., name, address, phone number)
+- So that my profile information is always up to date
 
-   **Acceptance Criteria:**
+   Acceptance Criteria:
    - Users should be able to edit and save changes to their personal information.
    - Changes should be reflected immediately on the user’s profile.
    - Notify users of successful profile updates via email or SMS.
 
-#### **User Story 4: Manage Account Security**
-- **As a** logged-in user
-- **I want** to manage my account security settings (e.g., change password, enable/disable MFA)
-- **So that** I can ensure my account remains secure
+User Story 4: Manage Account Security
+- As a logged-in user
+- I want to manage my account security settings (e.g., change password, enable/disable MFA)
+- So that I can ensure my account remains secure
 
-   **Acceptance Criteria:**
+   Acceptance Criteria:
    - Users should be able to change their password.
    - Users can enable or disable multi-factor authentication.
    - Users should receive notifications of any security changes made to their account.
 
 ---
 
-### **Epic 2: Financial Transactions Management**
+Epic 2: Financial Transactions Management
 
-**Description:** This epic encompasses functionalities that allow users to manage their financial transactions, including viewing transaction history, transferring funds, and setting up recurring payments.
+Description: This epic encompasses functionalities that allow users to manage their financial transactions, including viewing transaction history, transferring funds, and setting up recurring payments.
 
-#### **User Story 1: View Transaction History**
-- **As a** logged-in user
-- **I want** to view my transaction history
-- **So that** I can keep track of all my financial activities
+User Story 1: View Transaction History
+- As a logged-in user
+- I want to view my transaction history
+- So that I can keep track of all my financial activities
 
-   **Acceptance Criteria:**
+   Acceptance Criteria:
    - Users should be able to view a list of their recent transactions.
    - Users can filter transactions by date range, transaction type (credit/debit), and amount.
    - Transaction details should include date, amount, payee/payer, and description.
 
-#### **User Story 2: Transfer Funds**
-- **As a** logged-in user
-- **I want** to transfer funds between my accounts or to another user
-- **So that** I can manage my finances and send money when needed
+User Story 2: Transfer Funds**
+- As a logged-in user
+- I want to transfer funds between my accounts or to another user
+- So that I can manage my finances and send money when needed
 
-   **Acceptance Criteria:**
+   Acceptance Criteria:
    - Users should be able to transfer funds between their own accounts (e.g., savings to checking).
    - Users can transfer funds to another user by entering their account details.
    - The system should confirm the transfer and update the account balances immediately.
 
-#### **User Story 3: Set Up Recurring Payments**
-- **As a** logged-in user
-- **I want** to set up recurring payments (e.g., bill payments, subscriptions)
-- **So that** my payments are made automatically on scheduled dates
+User Story 3: Set Up Recurring Payments
+- As a logged-in user
+- I want to set up recurring payments (e.g., bill payments, subscriptions)
+- So that my payments are made automatically on scheduled dates
 
-   **Acceptance Criteria:**
+  Acceptance Criteria:
    - Users should be able to schedule recurring payments with frequency options (e.g., weekly, monthly).
    - Users should receive a notification before each payment is processed.
    - Users can edit or cancel recurring payments at any time.
 
-#### **User Story 4: Pay Bills**
-- **As a** logged-in user
-- **I want** to pay my utility bills directly from my account
-- **So that** I can manage my bill payments conveniently from one place
+User Story 4: Pay Bills
+- As a logged-in user
+- I want to pay my utility bills directly from my account
+- So that I can manage my bill payments conveniently from one place
 
-   **Acceptance Criteria:**
+   Acceptance Criteria:
    - Users should be able to add biller information and save it for future payments.
    - Users should be able to pay bills by selecting the biller and entering the payment amount.
    - Payment confirmation should be provided, and the transaction should be recorded in the transaction history.
