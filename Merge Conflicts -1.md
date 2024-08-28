@@ -1,5 +1,4 @@
 
-```markdown
 # Git Merge Conflict Resolution
 
 ## 1. Initialize a New Git Repository:
