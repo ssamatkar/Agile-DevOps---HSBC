@@ -1,4 +1,3 @@
-Here's a basic cheatsheet for both `vi` (or `vim`) and `nano` editors:
 
 ### **`vi` (or `vim`) Cheatsheet**
 
@@ -83,4 +82,3 @@ Here's a basic cheatsheet for both `vi` (or `vim`) and `nano` editors:
   - `Ctrl+G` : Display the help screen
   - `Ctrl+_` : Go to a specific line number
 
-Feel free to ask if you need more details on any command!
