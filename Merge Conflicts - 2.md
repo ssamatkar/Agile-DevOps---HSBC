@@ -1,112 +1,103 @@
-**Set Up a Repository**:
-   - Create a new repository on GitHub or use an existing one.
+**Create a New Repository**:
+   - Go to GitHub and create a new repository. Do not initialize it with a `README.md`, `.gitignore`, or license.
    - Clone the repository to your local machine:
      ```bash
-     git clone https://github.com/username/repo.git
-     cd repo
+     git clone https://github.com/your-username/merge-conflict-demo.git
+     cd merge-conflict-demo
      ```
 
-2. **Create and Switch to `feature-branch-1`**:
-   - Create a new branch and switch to it:
+2. **Initialize the Repository Locally**:
+   - Initialize the repository with a `main` branch and make the first commit:
      ```bash
-     git checkout -b feature-branch-1
+     echo "This is the README file." > README.md
+     git add README.md
+     git commit -m "Initial commit on main branch"
+     git push -u origin main
      ```
 
-3. **Make Changes in `feature-branch-1`**:
-   - Edit a file (e.g., `file.txt`):
-     ```bash
-     echo "Changes from feature-branch-1" >> file.txt
+### 2. **Create and Modify Branches**
+
+#### **Create a Feature Branch and Push to GitHub**
+
+1. **Create and switch to a new branch**:
+   ```bash
+   git checkout -b feature-branch
+   ```
+
+2. **Modify the `README.md` file**:
+   ```bash
+   echo "This is a change in the feature-branch." >> README.md
+   ```
+
+3. **Commit the change and push the branch to GitHub**:
+   ```bash
+   git add README.md
+   git commit -m "Update README on feature-branch"
+   git push -u origin feature-branch
+   ```
+
+#### **Modify the `main` Branch Locally**
+
+1. **Switch back to the `main` branch**:
+   ```bash
+   git checkout main
+   ```
+
+2. **Make a conflicting change to the `README.md` file**:
+   ```bash
+   echo "This is a change in the main branch." >> README.md
+   ```
+
+3. **Commit the change and push to GitHub**:
+   ```bash
+   git add README.md
+   git commit -m "Update README on main branch"
+   git push origin main
+   ```
+
+### 3. **Create the Merge Conflict on GitHub**
+
+#### **Open a Pull Request**
+
+1. **Go to GitHub** and navigate to your repository.
+2. **Create a Pull Request**:
+   - Click on the "Pull requests" tab.
+   - Click "New pull request".
+   - Compare the `feature-branch` with `main`.
+   - Click "Create pull request".
+
+#### **Merge the Pull Request**
+
+1. **Attempt to Merge**:
+   - You’ll see a message saying that the branch has conflicts that must be resolved before merging.
+   - Click "Resolve conflicts" to handle the merge conflict directly on GitHub.
+
+2. **Resolve the Conflict**:
+   - GitHub will show the conflicting sections of the `README.md` file, similar to how it would appear locally:
+     ```plaintext
+     This is the README file.
+     <<<<<<< main
+     This is a change in the main branch.
+     =======
+     This is a change in the feature-branch.
+     >>>>>>> feature-branch
      ```
-   - Commit the changes:
-     ```bash
-     git add file.txt
-     git commit -m "Changes from feature-branch-1"
-     ```
-   - Push the branch to GitHub:
-     ```bash
-     git push origin feature-branch-1
-     ```
-
-4. **Create and Switch to `feature-branch-2`**:
-   - Switch back to the main branch and create another branch:
-     ```bash
-     git checkout main
-     git pull origin main
-     git checkout -b feature-branch-2
-     ```
-
-5. **Make Conflicting Changes in `feature-branch-2`**:
-   - Edit the same file (`file.txt`) differently:
-     ```bash
-     echo "Changes from feature-branch-2" >> file.txt
-     ```
-   - Commit the changes:
-     ```bash
-     git add file.txt
-     git commit -m "Changes from feature-branch-2"
-     ```
-   - Push the branch to GitHub:
-     ```bash
-     git push origin feature-branch-2
-     ```
-
-6. **Create a Pull Request for `feature-branch-1`**:
-   - Go to GitHub and create a pull request from `feature-branch-1` into `main`.
-
-7. **Create a Pull Request for `feature-branch-2`**:
-   - Go to GitHub and create a pull request from `feature-branch-2` into `main`.
-
-8. **Attempt to Merge Both Pull Requests**:
-   - When you attempt to merge `feature-branch-1`, it will succeed if there are no conflicts.
-   - Next, try to merge `feature-branch-2`. GitHub will detect a conflict because both branches made changes to the same line in `file.txt`.
-
-### **Resolving the Conflict**
-
-**1. Resolve Conflict Locally**:
-   - **Fetch and Check Out the Branch with the Conflict**:
-     ```bash
-     git checkout feature-branch-2
-     git pull origin feature-branch-2
-     ```
-
-   - **Merge the Main Branch**:
-     ```bash
-     git fetch origin
-     git merge origin/main
-     ```
-     This will result in a conflict since `file.txt` has changes from both branches.
-
-   - **Resolve the Conflict**:
-     - Open the conflicting file (`file.txt`). Git marks the conflict areas with conflict markers:
-       ```
-       <<<<<<< HEAD
-       Changes from feature-branch-2
-       =======
-       Changes from feature-branch-1
-       >>>>>>> main
-       ```
-     - Edit the file to resolve the conflict. For example:
-       ```text
-       Changes from feature-branch-1
-       Changes from feature-branch-2
-       ```
-     - Save the file and remove the conflict markers.
-
-   - **Add and Commit the Resolved File**:
-     ```bash
-     git add file.txt
-     git commit -m "Resolved conflict between feature-branch-1 and feature-branch-2"
+   - Manually edit the file to resolve the conflict. For example, you might decide to keep both changes:
+     ```plaintext
+     This is the README file.
+     This is a change in the main branch.
+     This is a change in the feature-branch.
      ```
 
-   - **Push the Resolved Changes**:
-     ```bash
-     git push origin feature-branch-2
-     ```
+3. **Mark as Resolved**:
+   - After resolving the conflict, click "Mark as resolved".
+   - Commit the merge and complete the pull request.
 
-**2. Merge the Pull Request on GitHub**:
-   - Return to GitHub and merge the pull request for `feature-branch-2` into `main`. The conflict should be resolved now.
+### 4. **Update Local Repository**
 
-### **Summary**
+After resolving the conflict on GitHub, you need to update your local repository:
 
-- **Create a Conflict**: Make conflicting changes in different branches and try to merge them.
-- **Resolve a Conflict**: Fetch the branches, attempt to merge, edit the conflicting files, and commit the resolved changes.
+1. **Pull the latest changes from `main`**:
+   ```bash
+   git pull origin main
+   ```
