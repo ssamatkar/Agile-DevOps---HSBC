@@ -254,7 +254,7 @@ This will require you to sign up to their official website for free.
 2. Change the directory to the folder where you have installed ngrok.
 3.	Expose Jenkins: Run the following command in your git bash:
 ```
-./ngrok http 8081 --log-stdout
+./ngrok http 8081 --log stdout
 ```
 4. Copy the URL provided in the output of the above command
    e.g. (http://<ngrok_id>.ngrok-free.app/)
