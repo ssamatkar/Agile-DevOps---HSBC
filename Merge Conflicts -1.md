@@ -6,7 +6,7 @@
 ```bash
 mkdir merge-conflict-demo
 cd merge-conflict-demo
-git init
+git 
 ```
 
 ## 2. Create a Sample File:
