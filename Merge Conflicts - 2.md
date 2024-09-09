@@ -1,5 +1,5 @@
 **Create a New Repository**:
-   - Go to GitHub and create a new repository. Do not initialize it with a `README.md`, `.gitignore`, or license.
+   - Go to Github and create a new repository. Do not initialize it with a `README.md`, `.gitignore`, or license.
    - Clone the repository to your local machine:
      ```bash
      git clone https://github.com/your-username/merge-conflict-demo.git
