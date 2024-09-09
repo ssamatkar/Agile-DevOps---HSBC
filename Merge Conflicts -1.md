@@ -6,7 +6,7 @@
 ```bash
 mkdir merge-conflict-demo
 cd merge-conflict-demo
-git 
+git init .
 ```
 
 ## 2. Create a Sample File:
@@ -68,11 +68,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 Line 1
 Line 2
 Line 3
-<<<<<<< HEAD
-Line 4 from main
-=======
 Line 4 from feature-branch
->>>>>>> feature-branch
 ```
 
 ## 10. Edit the file to resolve the conflict. Choose which lines to keep or combine them:
